@@ -29,7 +29,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(-45deg, #1e3a5f, #15436d, #2c5982, #1f78b4);
+            background: linear-gradient(#030312);
             background-size: 400% 400%;
             animation: flowBackground 15s ease infinite;
             z-index: -1;
@@ -107,9 +107,11 @@
         <h1><span class="emoji">⚒</span> Flintt's Minecraft Hub <span class="emoji">⚒</span></h1>
         
         <div class="buttons-container">
-            <a href="https://github.com/your-username/your-repo/raw/main/modpack.zip" class="btn">Modpack</a>
-            <a href="https://github.com/your-username/your-repo/raw/main/resourcepack.zip" class="btn">Resource Pack</a>
+            <!-- Direct download -->
+            <a href="https://github.com/ace737/Stuffs/raw/main/modpack.zip" class="btn" download>Modpack</a>
+            <a href="https://github.com/ace737/Stuffs/raw/main/resourcepack.zip" class="btn" download>Resource Pack</a>
 
+            <!-- Password protected -->
             <button class="btn" id="resource-pack-2-btn">Resource Pack 2</button>
         </div>
     </div>
@@ -118,9 +120,9 @@
         document.getElementById('resource-pack-2-btn').addEventListener('click', () => {
             const password = prompt('Please enter the password to download this resource pack:');
             
-            // IMPORTANT: Change 'your-password' to the actual password you want to use.
+            // Change 'your-password' to your actual password
             if (password === 'your-password') {
-                window.location.href = 'https://github.com/your-username/your-repo/raw/main/resourcepack2.zip';
+                window.location.href = 'https://github.com/ace737/Stuffs/raw/main/resourcepack2.zip';
             } else {
                 alert('Incorrect password. Please try again.');
             }
